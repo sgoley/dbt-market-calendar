@@ -1,0 +1,29 @@
+# ======
+# Project Details
+# ======
+name: 'dbt-test-seed'
+version: '0.0.1'
+config-version: 2
+profile: 'default'
+
+# ======
+# File Path Configs
+# ======
+source-paths: ["models"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+data-paths: ["data"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+target-path: "target"  
+clean-targets:         
+    - "target"
+    - "dbt_modules"
+
+# ======
+# Seed Configs
+# ======
+seeds:
+    +enabled: true
+    +quote_columns: False
+    
