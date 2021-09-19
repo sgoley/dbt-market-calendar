@@ -1,12 +1,12 @@
 select 
-      csv.Row
-    , csv.Date
-    , csv.Year
-    , csv.Month
-    , csv.YearMonth
-    , csv.Day
-    , csv.Week_Index
-    , csv.Day_Index
+      csv.row_index
+    , csv.row_date
+    , csv.row_year
+    , csv.row_month
+    , csv.row_yearmonth
+    , csv.row_day
+    , csv.row_week_index
+    , csv.row_day_index
     , csv.is_weekend
     , csv.is_market_holiday
     , csv.is_eq_weekly_exp
