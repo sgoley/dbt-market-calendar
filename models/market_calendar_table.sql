@@ -17,4 +17,4 @@ select
     , csv.vix_weekly_exp_cumulative
     , csv.is_vix_monthly_exp
     , csv.is_vix_quarterly_exp
-from {{ ref('market-calendar-csv') }} csv
+from {{ ref('market_calendar_csv') }} csv
