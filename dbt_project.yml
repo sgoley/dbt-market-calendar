@@ -1,10 +1,10 @@
 # ======
 # Project Details
 # ======
+config-version: 2
 name: 'dbt_market_calendar'
 version: '0.0.1'
-config-version: 2
-profile: 'default'
+profile: default
 
 # ======
 # File Path Configs
@@ -24,6 +24,36 @@ clean-targets:
 # Seed Configs
 # ======
 seeds:
+  dbt_market_calendar:
     +enabled: true
+    +materialized: table
+    +schema: calendar
     +quote_columns: False
-    
+    +column_types:
+        row_index: numeric
+        row_date: Date
+        row_year: numeric
+        row_month: numeric
+        row_yearmonth: string
+        row_day: numeric
+        row_week_index: numeric
+        row_day_index: numeric
+        is_weekend: numeric
+        is_market_holiday: numeric
+        is_eq_weekly_exp: numeric
+        eq_weekly_exp_cumulative: numeric
+        is_eq_monthly_exp: numeric
+        is_eq_quarterly_exp: numeric
+        is_vix_weekly_exp: numeric
+        vix_weekly_exp_cumulative: numeric
+        is_vix_monthly_exp: numeric
+        is_vix_quarterly_exp: numeric
+
+# ======
+# Model Configs
+# ======
+models:
+  dbt_market_calendar:
+    +enabled: true
+    +materialized: table
+    +schema: calendar
